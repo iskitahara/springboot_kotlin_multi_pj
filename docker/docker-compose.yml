@@ -1,0 +1,22 @@
+version: '3'
+services:
+  # MySQL
+  db:
+    image: mariadb:10.5.8
+    ports:
+      - "3306:3306"
+    container_name: mysql_host
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+      - ./db/data:/var/lib/mysql
+      - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./db/sql:/docker-entrypoint-initdb.d
+  # Redis
+  redis:
+    image: redis:6.2.6-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - "./redis:/data"
