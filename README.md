@@ -1,10 +1,11 @@
 # 概要
-ひとまず動くところまでで、何をどう整理していくかを変更していく。テストコードも。
+ひとまず動くところまでで、何をどう整理していくかイシューを１００個作るレポジトリ。
 orderサービスはDBを参照、itemサービスはAPIを参照してデータを取得する。
 
-### 手修正するところ
+### 修正するところ
 ./infra-order-db/src/main/resources/generatorConfig.xml
-の以下の設定の「フルパス」を起動環境のフルパスに変更する
+の以下の設定の「フルパス」を起動環境のパスに変更する
+
 location="フルパス/infra-order-db/src/main/resources/mysql-connector-java-8.0.20.jar"/>
 
 ### もとのプロジェクト
