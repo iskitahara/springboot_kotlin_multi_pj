@@ -57,6 +57,7 @@ configure(listOf(project("api"))) {
         implementation("org.springframework.boot:spring-boot-starter-data-redis")
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.3")
+        implementation("org.springframework.boot:spring-boot-starter-actuator")
         testImplementation("org.springframework.security:spring-security-test")
         developmentOnly("io.springfox:springfox-boot-starter:3.0.0")
 
