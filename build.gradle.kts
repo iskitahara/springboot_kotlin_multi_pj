@@ -58,7 +58,7 @@ configure(listOf(project("api"))) {
         implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
         implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.12.3")
         testImplementation("org.springframework.security:spring-security-test")
-        developmentOnly("io.springfox:springfox-boot-starter:3.0.0")
+        implementation("io.springfox:springfox-boot-starter:3.0.0")
 
         runtimeOnly(project(":infra-order-db"))
         runtimeOnly(project(":infra-item-api"))
